@@ -1,5 +1,5 @@
 # Angular練習
-  2014/09 learn from Code School.
+  2014/09 learn from [Code School](https://www.codeschool.com/courses/shaping-up-with-angular-js).
   
 ## 怎麼運行
    可以用fire.app軟體watch這個專案，就可以看到效果。
