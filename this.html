@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*status*/
+		var status = {"unclick":"auto_unclick","click":"auto_click"};
+		var bucket = {'apple':'auto_unclick','orange':'3'};
+
+		function bucketStatus(className){
+			//alert("fun attribute: "+this);
+			//console.log("status.unclick: "+status.unclick);  // result : undefinded  =>because status is reserved words.
+			//console.log("fruit bucket num: "+bucket.apple);   // result : auto_unclick
+			if(className == status.unclick){alert(status.unclick)};
+
+			var aaa= {'bbb':20,
+					  'fff':function getaaa() {
+					  		//console.log(this);
+							//console.log(this.bbb);
+						},
+					};
+			aaa.fff();
+		};
+
+		bucketStatus("auto_unclick");
+		//alert(this);
+
+		//====if no object to call function(), then this is belong "window" object. otherwise, it's "object" ojbect
+		var x = 10;
+
+		function getLocaleX() {
+			var x = 100 ;  // add "var" is local variable in function(), if not the variable is golbal.
+			
+			console.log("this.x:"+ this.x); // 10
+
+			console.log("x:"+ x); // 100
+
+			this.x = x;
+
+			console.log("this.x:"+ this.x); // 100
+
+			console.log("x:"+ x); // 100
+		}
+
+		getLocaleX();
+	</script>
+</body>
+</html>

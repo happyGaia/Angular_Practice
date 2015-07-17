@@ -1,0 +1,23 @@
+				<h4>Reciews</h4>
+				<p ng-repeat="review in product.reviews" class="qotue">
+					<strong>{{review.stars}} Stars</strong> {{review.body}}<br>
+					－ {{review.author}}
+				</p>
+			<!--reviewCtrl-->
+				<form name="reviewForm" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+					<p class="qotue">
+						<strong>{{reviewCtrl.review.stars}} Stars</strong> {{reviewCtrl.review.body}}<br>
+						－ {{reviewCtrl.review.author}}
+					</p>
+					<select ng-model="reviewCtrl.review.stars" required>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br>
+					<textarea ng-model="reviewCtrl.review.body" placeholder="Wirte a short review of the product..." required></textarea><br>
+					<input ng-model="reviewCtrl.review.author" type="email" placeholder="jimmery@gmail.com" required><br>
+					<input type="submit" value="Submit"><br>
+					This form validate is PASS : {{reviewForm.$valid}}
+				</form>

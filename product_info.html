@@ -1,0 +1,31 @@
+	<!--panel-->
+		<!--<section ng-controller="panelController as panel">-->
+		<section>
+		<!--<section> -->
+			<!--click tab-->
+			<ul class="tab_btn">
+				<li>
+					<a href="" ng-click="panel.setTab(1)">Description</a>
+				</li>
+				<li>
+					<a href="" ng-click="panel.setTab(2)">Specifications</a>
+				</li>
+				<li>
+					<a href="" ng-click="panel.setTab(3)">Reciews</a>
+				</li>
+			</ul>
+			<!--{{tab}}-->
+			<!--show tab-->
+			<div ng-show="panel.isSelected(1)">
+				<h4>Description</h4>
+				<p>{{product.description}}</p>
+			</div>
+			<div ng-show="panel.isSelected(2)">
+				<h4>Specifications</h4>
+				<p></p>
+			</div>
+			<!-- <div ng-show="panel.isSelected(3)" product-add></div> -->
+			<div ng-show="panel.isSelected(3)" product-add>
+
+			</div>
+		</section>

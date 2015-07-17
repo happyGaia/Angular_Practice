@@ -1,0 +1,17 @@
+	<!--product info-->
+		<h3>{{product.name}}
+			<em class="fl">{{product.price | currency}}</em>
+		</h3>
+		<!--<p></p>-->
+		<!--<button ng-show="{{product.canPurchase}}">click</button>-->
+
+	<!--image-->
+		<!--<div class="tac" ng-controller="gralleryController as grallery">-->
+		<div class="tac" >
+			<img ng-src="{{product.images[grallery.current]}}" alt="">
+			<ul class="imagelist">
+				<li ng-repeat="image in product.images">
+					<img ng-src="{{image}}" alt="image" ng-mouseover="grallery.setValue($index)">
+				</li>
+			</ul>
+		</div>

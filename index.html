@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myStore">
+<head>
+	<meta charset="UTF-8">
+	<title>angularJs2</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/app2.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app2.js"></script>
+	<script type="text/javascript" src="js/product2.js"></script>
+</head>
+<body ng-controller="storeController as store">
+	<div ng-repeat="product in store.products" ng-hide="{{product.soldOut}}" class="productBox">
+
+		<product-title></product-title>	
+		
+		<product-info></product-info>
+
+	</div>	
+</body>
+</html>
